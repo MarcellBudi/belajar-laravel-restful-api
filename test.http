@@ -1,0 +1,127 @@
+
+POST http://localhost:8000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username" : "budi",
+    "password": "rahasia",
+    "name": "Marcell Budi Putra"
+}
+
+### Login User API
+POST http://localhost:8000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "username": "budi",
+    "password": "rahasia"
+}
+
+### Get Current User API
+GET http://localhost:8000/api/users/current
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Update Current User API
+PATCH http://localhost:8000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+{
+    "name" : "Marcell Putra"
+}
+
+### Logout User API
+DELETE http://localhost:8000/api/users/logout
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Create Contact API
+POST http://localhost:8000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+{
+    "first_name" : "po",
+    "last_name" : "permana",
+    "email" : "po@gmail.com",
+    "phone" : "08123123123"
+}
+
+### GEt Contact API #499
+GET http://localhost:8000/api/contacts/499
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Update Contact API #499
+PUT http://localhost:8000/api/contacts/499
+Accept: application/json
+Content-Type: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+{
+    "first_name" : "Natura",
+    "last_name" : "Kun",
+    "email" : "natkun@gmail.com",
+    "phone" : "08123123122"
+}
+
+### Delete Contact API #499
+DELETE http://localhost:8000/api/contacts/499
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Search Contact API
+GET http://localhost:8000/api/contacts?email=po
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Create Address API #503
+POST http://localhost:8000/api/contacts/503/addresses
+Accept: application/json
+Content-Type: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+{
+    "street": "jalan raya celuk sukawati 2",
+    "city" : "sukawati",
+    "province": "bali",
+    "country": "indonesia",
+    "postal_code": "501123"
+}
+
+### Get Address API #26
+GET http://localhost:8000/api/contacts/503/addresses/25
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### Update Address API #26
+PUT http://localhost:8000/api/contacts/503/addresses/26
+Accept: application/json
+Content-Type: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+{
+    "street": "jalan sakura gianyar",
+    "city" : "gianyar",
+    "province": "bali",
+    "country": "indonesia",
+    "postal_code": "501321"
+}
+
+### Remove Address API #26
+DELETE http://localhost:8000/api/contacts/503/addresses/26
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+### List Address API
+GET http://localhost:8000/api/contacts/503/addresses
+Accept: application/json
+Authorization: 5ecd5225-c5d6-4f54-8105-4a5cd6613aa8
+
+
+
